@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+</head>
+<body>
+  <!-- 
+    The "action" attribute tells where to send the form data when
+    submitting the form
+   -->
+  <form action="./submission.html">
+
+    <!-- 
+      The "name" attribute represents the keys to the form data that
+      will be sent within this form element. Each "name" will have a
+      corresponding value to its associated input. The label's "for"
+      attriibute goes hand-in-hand with the input's "id" attribute that
+      the label is associated to.
+     -->
+    <div>
+      <label for="username">Username</label>
+      <input name="username" type="text" id="username">
+    </div>
+
+    <!-- 
+      An alternative to "for" and "id" is to wrap the input in 
+      the <label> tag. Type "email" will ensure that it is formatted
+      as an email when submitting the form.
+    -->
+    <div>
+      <label>Email
+        <input name="email" type="email">
+      </label>
+    </div>
+
+    <!-- Type "password" will hide the characters on the browser -->
+    <div>
+      <label for="password">Password</label>
+      <input name="password" type="password" id="password">
+    </div>
+
+    <!-- 
+      Placeholders can be used to describe the input, 
+      you will see it if the input is empty 
+    -->
+    <div>
+      <label for="description">Description</label>
+      <textarea 
+        name="description" 
+        id="description" 
+        cols="20" 
+        rows="3"
+        placeholder="I like to code..."
+      ></textarea>
+    </div>
+
+    <!-- 
+      Both radio buttons have the attribute name="gender", but only
+      one value will be submitted. We should also specify what the 
+      value of each radio button is when selected
+     -->
+    <div>
+      <label for="female">Female</label>
+      <input name="gender" type="radio" id="female" value="female">
+    </div>
+    <div>
+      <label for="male">Male</label>
+      <input name="gender" type="radio" id="male" value="male">
+    </div>
+
+    <!-- 
+      In the option tag, the content is what you see in the dropdown, 
+      but the value attrbitue is what gets sent with the form.
+    -->
+    <div>
+      <label for="favourite-meal">What is your favourite meal?</label>
+      <select name="favourite-meal" id="favourite-meal">
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="date-of-birth">When is your birthday?</label>
+      <input name="date-of-birth" type="date" id="date-of-birth">
+    </div>
+
+    <!-- 
+      The "required" attribute can be added to any of the inputs in 
+      this form. It ensures that the form cannot be submitted if the 
+      value is empty. The "required" attribute doesn't need a value.
+     -->
+    <div>
+      <label for="agreement">I agree to the terms and conditions</label>
+      <input type="checkbox" id="agreement" required>
+    </div>
+
+    <!-- type "reset" will empty out the form  -->
+    <input type="reset">
+
+    <!-- type "submit" will trigger the form submission -->
+    <input type="submit" value="Sign Up">
+  </form>
+</body>
+</html>
