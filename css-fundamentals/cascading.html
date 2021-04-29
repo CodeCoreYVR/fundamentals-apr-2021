@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cascading</title>
+  <style>
+    /* 
+      If the specificity is the same and the properties clash,
+      whichever declaration comes last gets applied due to cascading
+    */
+
+    p.post {
+      color: aquamarine;
+    }
+
+    /* 
+      !important overrides specificity
+      Usually used as a last resort, we don't need to use !important if we 
+      grouped our elements together in an organized way using specificity
+    */
+    p.post {
+      color: burlywood !important;
+    }
+
+    p.post {
+      color: crimson;
+    }
+  </style>
+</head>
+<body>
+  <p class="post">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, labore?</p>
+  <p class="post">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, labore?</p>
+  <p class="post">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, labore?</p>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specificity Points</title>
+  <style>
+    * {
+      font-size: 1.1em;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(100px, max-content);
+      grid-gap: 1em;
+    }
+
+    .container div {
+      border: 1px solid #000;
+    }
+
+    .container div { /* 11 pts */
+      background-color: whitesmoke;
+    }
+
+    .box {
+      text-align: center;
+      color: red;
+    }
+
+    /* 
+      Elements: 1pt
+      Classes: 10pts
+      IDs: 100pts
+     */
+
+    #box1 { /* 100 pts */
+      background-color: lightcoral;
+    }
+
+    .container #box1 { /* 110 pts */
+      background-color: lightgreen;
+    }
+
+    div.container div#box1 { /* 112 pts */
+      background-color: yellow;
+    } 
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box" id="box1">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <div class="box">Box 4</div>
+  </div>
+</body>
+</html>

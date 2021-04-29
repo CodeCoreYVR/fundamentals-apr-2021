@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectors</title>
+  <style>
+    /* When we use a selector, it targets all elements on the page that match the selector */
+    /* Tag selector */
+    h1 {
+      text-decoration: underline;
+    }
+
+    /* To select elements with a class, use "." appended with the class name */
+    .red {
+      color: red;
+    }
+
+    .post {
+      text-align: justify;
+    }
+
+    /* To select ids, use the "#" symbol appended with the id name */
+    #first-paragraph {
+      background-color: darkgrey;
+    }
+
+    /* Selects all <span> inside of #first-paragraph */
+    #first-paragraph span {
+      color: blue;
+    }
+
+    /* Selects elements with multiple attributes */
+    .post.red#first-paragraph {
+      width: 50vw;
+    }
+
+    h1, .post {
+      font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    /* Select all <p> inside of <div> with a class of special */
+    div.special p {
+      color: pink;
+    }
+
+    /* Select all direct children <li> within a <ul> element with a class of special */
+    ul.special > li {
+      font-size: large;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    Classes can be added by giving a "class" attribute
+    You can add classes to as many elements as you wish
+  -->
+  <h1 class="red">Selectors</h1>
+
+  <!-- 
+    To add multiple classes to a single element, add a space in-between class names 
+    Below, the paragraphs have both the "red" class and the "post" class
+
+    ids can be added by giving an "id" attribute
+    An id name should be unique per document
+  -->
+  <p class="red post" id="first-paragraph">
+    Lorem ipsum dolor sit amet, <span>THIS IS IN THE SPAN</span> consectetur adipisicing elit. Ut necessitatibus sapiente dignissimos amet explicabo minima.
+  </p>
+  <p class="red post">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo debitis eos laborum minima dolore distinctio.
+  </p>
+
+  <div class="special">
+    <h2>Not the paragraph</h2>
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, facere?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, facere?</p>
+    </div>
+  </div>
+
+  <ul class="special">
+    <li>Red</li>
+    <li>Green</li>
+    <li>Blue</li>
+  </ul>
+</body>
+</html>
