@@ -1,0 +1,47 @@
+h1 {
+  text-align: center;
+  font-size: 72px;
+  margin: 20px;
+}
+
+.parent {
+  height: 500px;
+  width: 500px;
+  background-color: cornflowerblue;
+  margin: auto;
+  position: relative;
+}
+
+.child {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+}
+
+/* 
+  Without z-index, the latter siblings stacks on top of previous siblings
+  by default and children stack on top of parents
+
+  The higher z-index value will stack on top of the lower one
+  The default value is 0
+  z-index can only be applied on non-static elements
+*/
+
+.child-1 {
+  background-color: rebeccapurple;
+  top: -20px;
+  left: -20px;
+  z-index: 3;
+}
+.child-2 {
+  background-color: olivedrab;
+  top: 40px;
+  left: 40px;
+  z-index: 2;
+}
+.child-3 {
+  background-color: burlywood;
+  top: 100px;
+  left: 100px;
+  z-index: 1;
+}

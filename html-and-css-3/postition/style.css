@@ -1,0 +1,72 @@
+h1 { text-align: center; }
+
+.parent {
+  border: 2px solid black;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+}
+
+.child {
+  background-color: palevioletred;
+  height: 200px;
+  width: 200px;
+  font-size: 40px;
+}
+
+/* 
+  To go along with the position property, we have these properties:
+  - top
+  - right
+  - bottom
+  - left
+*/
+
+.child.static {
+  position: static; /* By default all HTML element have static positioning */
+
+  /* top, left, right, and bottom properties have no effect */
+  top: 5000px;
+  left: 5000px;
+}
+
+.child.relative {
+  /* Relative is positioned relative to its normal static position */
+  position: relative;
+
+  /* top, left, right, and bottom properties now have an effect */
+  top: 20px;
+  right: 40px;
+}
+
+.parent.parent-absolute {
+  /* 
+    We change the parent's position to non-static so that 
+    the absolute positioned child is relative to this element
+  */
+  position: relative;
+}
+
+.child.absolute {
+  /* 
+    If top, left, right, and bottom are used:
+      * The element is relative to the first ancestor that is not static.
+      * If none of the ancestors are non-static, then it's relative to the body
+
+    If top, left, right, and bottom are unused:
+      * It's going to be in the normal static position
+  */
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
+.child.fixed {
+  /* 
+    top, left, etc...are now relative to the viewport. It's taken out of the
+    normal flow of the document and is fixed when we scroll  
+  */
+  position: fixed;
+  top: 20px;
+  right: 40px;
+}

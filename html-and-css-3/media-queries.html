@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Queries</title>
+  <style>
+    .box {
+      height: 500px;
+      width: 500px;
+    }
+    @media (max-width: 1080px) {
+      .box {
+        background-color: red;
+      }
+    }
+    @media (min-width: 960px) {
+      .box {
+        background-color: green;
+      }
+    }
+    /* 
+      You can add multiple conditions with "and"
+      Even though at least one of the above rules are true for a given
+      width, we see fuchsia if the browser's width is between 960px and 1080px
+      because of cascading, which is used for the same specificity. 
+      The specificity is based off of the selector ".box", not the media query
+    */
+    @media (max-width: 1080px) and (min-width: 960px) {
+      .box {
+        background-color: fuchsia;
+      }
+    }
+  
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

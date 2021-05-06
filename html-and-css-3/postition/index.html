@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>CSS Position</title>
+</head>
+<body>
+  <h1>CSS Position</h1>
+  <div class="parent">
+    <div class="child static">
+      Static
+    </div>
+  </div>
+  <div class="parent">
+    <div class="child relative">
+      Relative <br>
+      top: 20px <br>
+      right: 40px
+    </div>
+  </div>
+  <div class="parent parent-absolute">
+    <div class="child absolute">
+      Absolute <br>
+      top: 20px <br>
+      right: 40px
+    </div>
+  </div>
+  <div class="parent">
+    We don't see the fixed child in this parent div because it's taken
+    out of the normal flow of the document and is fixed when we scroll
+    <div class="child fixed">
+      Fixed <br>
+      top: 20px <br>
+      right: 40px
+    </div>
+  </div>
+</body>
+</html>

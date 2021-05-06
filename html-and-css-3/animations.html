@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyframes</title>
+  <style>
+    .box {
+      height: 500px;
+      width: 500px;
+      background-color: goldenrod;
+      animation-name: switch-color;
+      animation-duration: 5s; /* required */
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    /* We give the @keyframes rule an animation-name from above */
+    @keyframes switch-color {
+      from {
+        background-color: hotpink;
+        width: 200px;
+      }
+      to {
+        background-color: indigo;
+        width: 700px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
