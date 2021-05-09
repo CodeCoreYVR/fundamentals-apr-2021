@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Basics</title>
+</head>
+<body>
+  <p id="first-paragraph">
+    Text Node
+    <a href="#">Hi</a>
+  </p>
+
+  <script>
+    window.open('http://www.google.com') // open a url
+    document.body // Gives us the body node element
+
+    const p = document.createElement('p')
+    const text = document.createTextNode("Hello DOM")
+    p.appendChild(text)
+    document.body.appendChild(p)
+
+    // returns the element with the id of "first-paragraph"
+    // returns null if id doesn't exist
+    const firstParagraph = document.getElementById('first-paragraph')
+
+    // Nodes include text, comments, and elements
+    firstParagraph.childNodes
+
+    for (let i = 0; i < document.links.length; i++) {
+      document.links[i].style.color = 'red'
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Ready</title>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+  </script>
+  <script>
+    // This <script> comes after including jQuery so we can have access to it
+    // If <script> is in the <head>, the JS will run before the document.body is loaded
+    console.log(document.body)
+
+    // If we use ready(), the callback will run after the body has loaded
+    // Here we can put our JS script inside the body of the callback
+    $(document).ready(function() {
+      // put our script in here
+      console.log("jQuery ready:", document.body)
+    })
+    
+    // shorthand is passing a callback to $()
+    $(function() {
+      console.log("shorthand jQuery ready:", document.body)
+    })
+    
+    // DOM version
+    document.addEventListener("DOMContentLoaded", function() {
+      console.log("DOMContentLoaded:", document.body)
+    })
+  </script> 
+</head>
+<body>
+  <h1>Document Ready</h1>
+</body>
+</html>

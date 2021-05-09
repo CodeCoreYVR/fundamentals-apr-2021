@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Basics</title>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+  </script>
+</head>
+<body>
+  <h1>Welcome to the DOM</h1>
+  
+  <script>
+    // $ is a function (the jQuery library)
+    // $("h1") if you pass in a string as an argument, it's a CSS selector
+    
+    $("h1") // Selects all h1 tags on the page in an array-like "wrapped set"
+
+    // "wrapped sets" don't inherit the DOM methods, but rather jQuery methods
+    $("h1").html("Welcome to jQuery")
+  </script>
+</body>
+</html>
