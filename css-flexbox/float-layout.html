@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float Layout</title>
+  <style>
+    body {
+      color: white;
+      margin: 0;
+    }
+
+    header, footer {
+      background-color: brown;
+      position: fixed;
+      width: 100vw;
+      height: 8vh;
+    }
+
+    header { top: 0; }
+    footer { bottom: 0; }
+
+    div { background-color: teal; }
+
+    .banner {
+      /* margin-top: 8vh;
+      margin-left: 2.5vw;
+      margin-right: 2.5vw;
+      margin-bottom: 2.5vw; */
+      /* To write all 4: margin: top right bottom left */
+      margin: 8vh 2.5vw 2.5vw 2.5vw;
+      width: 95vw;
+      height: 19vh;
+    }
+    .content {
+      float: left;
+      height: 60vh;
+      width: 60vw;
+      margin-left: 2.5vw;
+    }
+    .sidebar {
+      float: right;
+      height: 60vh;
+      width: 32.5vw;
+      margin-right: 2.5vw;
+    }
+  </style>
+</head>
+<body>
+  <header>Header</header>
+    <div class="banner">Banner</div>
+    <div class="content">Content</div>
+    <div class="sidebar">Sidebar</div>
+  <footer>Footer</footer>
+</body>
+</html>
